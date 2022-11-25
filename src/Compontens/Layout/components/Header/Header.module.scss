@@ -16,14 +16,15 @@
     align-items: center;
     justify-content: space-between;
 }
-.logo {
+.search-result,
+.search {
+    width: 361px;
 }
 .search {
     position: relative;
     background-color: rgba(255, 255, 255, 0.12);
     border-radius: var(--search-border-radius);
     padding-left: 16px;
-    width: 361px;
     height: var(--search-height);
     display: flex;
     border: 1.5px solid transparent;
@@ -79,4 +80,10 @@
     &:active {
         background: rgba(255, 255, 255, 0.08);
     }
+}
+.search-title {
+    font-size: 1.4rem;
+    padding: 5px 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
 }
