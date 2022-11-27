@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
 import { Wrapper as PropperWrapper } from '~/Compontens/Propper';
+import Button from '~/Compontens/Button/index';
 import styles from './Header.module.scss';
 import images from '~/assets/image';
 import Accountitem from '~//Compontens/Accountitem/index';
@@ -15,7 +16,7 @@ function Header() {
 
     useEffect(() => {
         setInterval(() => {
-            setSearchResult([]);
+            setSearchResult([1]);
         }, 0);
     }, []);
 
@@ -55,7 +56,12 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('action')}></div>
+                <div className={cx('action')}>
+                    <Button text LeftIcon ={<FontAwesomeIcon icon={faPlus}/>}>Upload</Button>
+                    <Button primary className={cx('custom-login')}>
+                        Log in
+                    </Button>
+                </div>
             </div>
         </header>
     );
