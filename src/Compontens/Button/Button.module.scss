@@ -54,6 +54,10 @@
         background-color: rgba(254, 44, 85, 0.1);
     }
 }
+.Menuitem {
+    color: #fff;
+    background-color: rgb(37, 37, 37);
+}
 .text {
     border: 1px solid rgba(22, 24, 35, 0.12);
     background: rgba(255, 255, 255, 0.08);
@@ -65,6 +69,11 @@
 .Icon + .tittle,
 .tittle + .Icon {
     margin-left: 8px;
+}
+.Icon {
+    display: inline-block;
+    text-align: center;
+    width: 20px;
 }
 // Button Size
 .small {

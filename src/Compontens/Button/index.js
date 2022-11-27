@@ -6,12 +6,13 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
+    className,
     disabled = false,
     children,
     text = false,
     rounded = false,
     outline = false,
-    className,
+    Menuitem = false,
     LeftIcon,
     rightIcon,
     small = false,
@@ -50,6 +51,7 @@ function Button({
         text,
         rounded,
         disabled,
+        Menuitem,
     });
     return (
         <Comp className={classes} {...prop}>
