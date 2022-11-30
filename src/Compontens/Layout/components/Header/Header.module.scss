@@ -11,6 +11,7 @@
 }
 .inner {
     height: 100%;
+    padding: 0 var(--default-layout-header-horizontal-space);
     width: var(--default-layout-header-width);
     display: flex;
     align-items: center;
@@ -86,6 +87,25 @@
     padding: 5px 12px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.5);
+}
+.action {
+    display: flex;
+    align-items: center;
+}
+.action-btn {
+    font-size: 2.2rem;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.user-avatar {
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 32px;
+    margin-left: 12px;
+    cursor: pointer;
 }
 // Icon Action
 .more-btn {

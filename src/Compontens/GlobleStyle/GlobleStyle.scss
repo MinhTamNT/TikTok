@@ -5,6 +5,7 @@
     //DEfault layout
     --default-layout-header-height: 60px;
     --default-layout-header-width: 1150px;
+    --default-layout-header-horizontal-space: 24px;
 
     //Color Font
     --whiteColor: #ebebeb;
@@ -47,4 +48,22 @@ input,
 a[href] {
     color: var(--white);
     text-decoration: none;
+}
+
+// Custom tippy
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: rgb(255, 255, 255);
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-arrow {
+        color: #333;
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
 }
