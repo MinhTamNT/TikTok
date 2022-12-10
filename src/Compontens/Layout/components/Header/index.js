@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBox,
     faCircleXmark,
     faCoins,
     faEarthAmerica,
@@ -24,9 +23,10 @@ import { Wrapper as PropperWrapper } from '~/Compontens/Propper';
 import Button from '~/Compontens/Button/index';
 import styles from './Header.module.scss';
 import images from '~/assets/image';
+import Image from '~/Compontens/images/index';
 import Accountitem from '~/Compontens/Accountitem/index';
 import Menu from '~/Compontens/Propper/Menu';
-import { MessgaeIcons } from '~/Compontens/icons';
+import { MessgaeIcons, BoxMessage } from '~/Compontens/icons';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -162,7 +162,7 @@ function Header() {
                             </Tippy>
                             <Tippy delay={[0, 200]} content="Hộp Thư" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faBox} />
+                                    <BoxMessage />
                                 </button>
                             </Tippy>
                         </>
@@ -178,10 +178,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? USERITEM : MENU_ITEMS} onChange={handleChange}>
                         {currentUser ? (
-                            <img
-                                src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg"
+                            <Image
+                                src=""
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van a"
+                                fallback="https://i.pinimg.com/736x/49/27/aa/4927aa285cd5c1de43e34da92d520b57.jpg"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
