@@ -10,7 +10,6 @@ import {
     faGear,
     faKeyboard,
     faMagnifyingGlass,
-    faMessage,
     faPlus,
     faQuestion,
     faSignOut,
@@ -20,7 +19,6 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
-import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 import { Wrapper as PropperWrapper } from '~/Compontens/Propper';
 import Button from '~/Compontens/Button/index';
@@ -28,7 +26,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/image';
 import Accountitem from '~/Compontens/Accountitem/index';
 import Menu from '~/Compontens/Propper/Menu';
-import { faUber } from '@fortawesome/free-brands-svg-icons';
+import { MessgaeIcons } from '~/Compontens/icons';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -159,7 +157,7 @@ function Header() {
                             </Button>
                             <Tippy delay={[0, 200]} content="Tin Nhắn" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <MessgaeIcons />
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 200]} content="Hộp Thư" placement="bottom">
@@ -181,7 +179,7 @@ function Header() {
                     <Menu items={currentUser ? USERITEM : MENU_ITEMS} onChange={handleChange}>
                         {currentUser ? (
                             <img
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/90de991fdbcb5210475a2340767f383f~c5_100x100.jpeg?x-expires=1669942800&x-signature=xKVPILxL99u9K8TJKvG4OLTCZSo%3D"
+                                src="https://phunugioi.com/wp-content/uploads/2020/01/anh-avatar-supreme-dep-lam-dai-dien-facebook.jpg"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van a"
                             />
