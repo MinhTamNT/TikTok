@@ -1,30 +1,25 @@
-import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCircleXmark,
     faCoins,
     faEarthAmerica,
     faEllipsisVertical,
     faGear,
     faKeyboard,
-    faMagnifyingGlass,
     faPlus,
     faQuestion,
     faSignOut,
-    faSpinner,
     faToggleOn,
     faTv,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
+import Search from '../Search';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import { Wrapper as PropperWrapper } from '~/Compontens/Propper';
 import Button from '~/Compontens/Button/index';
 import styles from './Header.module.scss';
 import images from '~/assets/image';
 import Image from '~/Compontens/images/index';
-import Accountitem from '~/Compontens/Accountitem/index';
 import Menu from '~/Compontens/Propper/Menu';
 import { MessgaeIcons, BoxMessage } from '~/Compontens/icons';
 const cx = classNames.bind(styles);
@@ -65,14 +60,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
     const currentUser = true;
-
-    useEffect(() => {
-        setInterval(() => {
-            setSearchResult([]);
-        }, 0);
-    }, []);
     // Hanle Logic
     const handleChange = (MENUTEMS) => {
         switch (MENUTEMS.types) {
@@ -118,35 +106,7 @@ function Header() {
                 <div className={cx('logo')}>
                     <img src={images.logo} alt="TikTok" />
                 </div>
-                {/* //Sreach */}
-                <Tippy
-                    interactive
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PropperWrapper>
-                                <h4 className={cx('search-title')}>Account</h4>
-                                <Accountitem />
-                                <Accountitem />
-                                <Accountitem />
-                                <Accountitem />
-                                <Accountitem />
-                            </PropperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Search account and videos" spellCheck={false} />
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
-
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                    </div>
-                </Tippy>
+                <Search />
 
                 {/* Handle Logic Login */}
                 <div className={cx('action')}>
@@ -163,6 +123,7 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Hộp Thư" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <BoxMessage />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>

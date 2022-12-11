@@ -16,12 +16,11 @@ export const upLoadIcons = ({ width = '3.2rem', className, height = '3.2rem' }) 
     </svg>
 );
 
-export const MessgaeIcons = ({ width = '3.2rem', className, height = '3.2rem' }) => (
+export const MessgaeIcons = ({ width = '2.6rem', height = '2.6rem', className }) => (
     <svg
         className={className}
         width={width}
         height={height}
-        data-e2e=""
         viewBox="0 0 48 48"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"

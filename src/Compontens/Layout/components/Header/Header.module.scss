@@ -17,83 +17,15 @@
     align-items: center;
     justify-content: space-between;
 }
-.search-result,
-.search {
-    width: 361px;
-}
-.search {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.12);
-    border-radius: var(--search-border-radius);
-    padding-left: 16px;
-    height: var(--search-height);
-    display: flex;
-    border: 1.5px solid transparent;
-    input {
-        flex: 1;
-        height: 100%;
-        color: var(--whiteColor);
-        font-size: 1.6rem;
-        background-color: transparent;
-        caret-color: var(--CaretColor);
-    }
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(255, 255, 255, 0.75);
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        top: var(--search-top-space);
-        background: rgba(255, 255, 255, 0.12);
-        right: var(--search-btn-width);
-        width: 1px;
-        height: calc(var(--search-height) - var(--search-top-space) * 2);
-    }
-    &:focus-within {
-        border-color: rgba(255, 255, 255, 0.12);
-    }
-}
-
-.clear,
-.loading {
-    background: rgba(255, 255, 255, 0.12);
-    position: absolute;
-    right: calc(var(--search-btn-width) + 16px);
-    top: 50%;
-
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.34);
-}
-.search-btn {
-    background-color: rgb(22 24 35 / 3%);
-    width: var(--search-btn-width);
-    height: 100%;
-    border-bottom-right-radius: var(--search-border-radius);
-    border-top-right-radius: var(--search-border-radius);
-    font-size: 1.8rem;
-    color: rgba(255, 255, 255, 0.34);
-
-    &:hover {
-        cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.12);
-    }
-
-    &:active {
-        background: rgba(255, 255, 255, 0.08);
-    }
-}
-.search-title {
-    font-size: 1.4rem;
-    padding: 5px 12px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.5);
-}
+//Action
 .action {
     display: flex;
     align-items: center;
 }
 .action-btn {
+    position: relative;
     font-size: 2.2rem;
+    display: flex;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.9);
     padding: 4px 12px;
@@ -115,4 +47,18 @@
     background-color: transparent;
     font-size: 2rem;
     margin-left: 28px;
+}
+.badge {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: var(--font-family);
+    background-color: var(--primary);
 }
