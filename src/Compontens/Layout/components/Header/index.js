@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import routesConfig from '~/config/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCoins,
@@ -13,6 +14,7 @@ import {
     faTv,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import Search from '../Search';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -104,7 +106,9 @@ function Header() {
             <div className={cx('inner')}>
                 {/* Logo */}
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="TikTok" />
+                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt="TikTok" />
+                    </Link>
                 </div>
                 <Search />
 
@@ -139,12 +143,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? USERITEM : MENU_ITEMS} onChange={handleChange}>
                         {currentUser ? (
-                            <Image
-                                src=""
-                                className={cx('user-avatar')}
-                                alt="Nguyen Van a"
-                                fallback="https://i.pinimg.com/736x/49/27/aa/4927aa285cd5c1de43e34da92d520b57.jpg"
-                            />
+                            <Image src="" className={cx('user-avatar')} alt="Nguyen Van a" />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
