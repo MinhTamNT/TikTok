@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import Accountitem from '~/Compontens/Accountitem/index';
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/Services/searchServices';
 import { Wrapper as PropperWrapper } from '~/Compontens/Propper';
 import useDebounce from '~/hooks/useDebounce';
 import classNames from 'classnames/bind';

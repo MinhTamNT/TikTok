@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import routesConfig from '~/config/routes';
+import config from '~/config/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCoins,
@@ -106,7 +106,7 @@ function Header() {
             <div className={cx('inner')}>
                 {/* Logo */}
                 <div className={cx('logo')}>
-                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <Link to={config.routes.home} className={cx('logo-link')}>
                         <img src={images.logo} alt="TikTok" />
                     </Link>
                 </div>
