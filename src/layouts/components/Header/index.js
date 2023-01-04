@@ -1,6 +1,3 @@
-import classNames from 'classnames/bind';
-import config from '~/config/index';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCoins,
     faEarthAmerica,
@@ -14,16 +11,19 @@ import {
     faTv,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import Search from '../Search';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
+import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import 'tippy.js/dist/tippy.css';
-import Button from '~/Compontens/Button/index';
-import styles from './Header.module.scss';
 import images from '~/assets/image';
+import Button from '~/Compontens/Button/index';
+import { BoxMessage, MessgaeIcons } from '~/Compontens/icons';
 import Image from '~/Compontens/images/index';
 import Menu from '~/Compontens/Propper/Menu';
-import { MessgaeIcons, BoxMessage } from '~/Compontens/icons';
+import config from '~/config/index';
+import Search from '../Search';
+import styles from './Header.module.scss';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [

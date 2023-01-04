@@ -49,14 +49,12 @@ function Search() {
             setSearchText(searchValues);
         }
     };
-    const handleSumbit = (e) => {};
     return (
         // Using wrap <span> or <div> tag around the reference element sloves this by creating a new parentNode context
         // That is warring for the Tippy ReactJs
         <div>
             <HeadlessTippy
                 interactive
-                appendTo={() => document.body}
                 visible={showResult && searchResult.length > 0}
                 render={(attrs) => (
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
