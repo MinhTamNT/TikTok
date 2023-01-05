@@ -1,4 +1,4 @@
-import './GlobleStyle.scss';
+import './GlobleStyle.module.scss';
 import PropTypes from 'prop-types';
 function GlobleStyle({ children }) {
     return children;
