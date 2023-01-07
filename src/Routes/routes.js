@@ -2,11 +2,11 @@ import config from '~/config/index';
 //Layouts
 import HeaderOnly from '~/layouts/HeaderOnly/index';
 // Page
-import Home from '~/Pages/Home';
 import Following from '~/Pages/Following';
+import Home from '~/Pages/Home';
 import Profile from '~/Pages/Profile';
 import Upload from '~/Pages/Upload';
-
+import Live from '~/Pages/Live';
 // Public Routes
 const publicRoutes = [
     {
@@ -20,6 +20,10 @@ const publicRoutes = [
     {
         path: config.routes.Profile,
         component: Profile,
+    },
+    {
+        path: config.routes.Live,
+        component: Live,
     },
     {
         path: config.routes.upload,
