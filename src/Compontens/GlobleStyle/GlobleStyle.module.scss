@@ -10,7 +10,7 @@
     --whiteColor: #ebebeb;
 
     // TEXTCOLOR
-    --text-color: #333;
+    --text-color: rgba(255, 255, 255, 0.9);
 
     // CaretColor
     --CaretColor: rgb(255, 59, 92);
@@ -37,7 +37,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    background-color: #121212;
+    background-color: rgb(18, 18, 18);
     color: var(--text-color);
     overflow-y: overlay;
 }

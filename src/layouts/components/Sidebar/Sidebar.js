@@ -4,9 +4,10 @@ import {
     HomeIconActive,
     LiveActiveIcon,
     LiveIcon,
-    UserGroupIcon,
     UserGroupActiveIcon,
+    UserGroupIcon,
 } from '~/Compontens/icons/index';
+import SuggestAccount from '~/Compontens/SuggestAccount';
 import config from '~/config';
 import Menu, { MenuItems } from './Menu';
 import styles from './SideBar.module.scss';
@@ -29,6 +30,8 @@ function SideBar() {
                 />
                 <MenuItems title="Live" to={config.routes.Live} icon={<LiveIcon />} activeicons={<LiveActiveIcon />} />
             </Menu>
+            <SuggestAccount lable="Tài khoản được đề xuất" />
+            <SuggestAccount lable="TàI khoản theo dõi" />
         </aside>
     );
 }
